@@ -6,11 +6,11 @@ Continue game after drawing first hand
 
 
 //Card constructor
-function Card(cardName, cardType, amount){
+function Card(cardName, cardType, amount) {
 	this.cardName = cardName;
 	this.cardType = cardType;
 	this.amount = amount;
-};
+}
 
 //17 different types of cards -- Maybe try to put in an array or object so that initializing the deck will be easy?
 var obSun = new Card("Observatory", "Sun", 9);
@@ -32,23 +32,23 @@ var liDoor = new Card("Library", "Door", 2);
 var drMare = new Card("Dream", "Nightmare", 10);
 
 //Making an array of unique cards
-var cards = [obSun, obMoon, obKey, obDoor, 
+var cards = [obSun, obMoon, obKey, obDoor,
 			aqSun, aqMoon, aqKey, aqDoor,
 			gaSun, gaMoon, gaKey, gaDoor,
 			liSun, liMoon, liKey, liDoor,
-			drMare]; 
+			drMare];
 
 //Initializing the deck array from the cards array
 var deck = [];
-for(var i = 0; i < cards.length; i++){
-	for(var j = 0; j < cards[i].amount; j++){
+for (var i = 0; i < cards.length; i++) {
+	for (var j = 0; j < cards[i].amount; j++) {
 		deck.push(cards[i]);
 	}
 }
 
 //Draw a card from the deck
-var draw = function(){
-	var card = deck[Math.floor(Math.random()*deck.length)];
+var draw = function() {
+	var card = deck[Math.floor(Math.random() * deck.length)];
 	return card;
 };
 
@@ -59,10 +59,10 @@ var playArea = [];
 var doorsGained = [];
 
 
-//***initialDraw does not move limbo cards back to deck yet*** Maybe it should be a different function?
-var initialDraw = function(){
+//***initialDraw does not move limbo cards back to deck yet*** Instead, I should create a shuffle function
+var initialDraw = function() {
 	var newCard = draw();
-	if(newCard.cardType === "Nightmare" || newCard.cardType === "Door"){
+	if (newCard.cardType === "Nightmare" || newCard.cardType === "Door") {
 		deck.pop(newCard);
 		limbo.push(newCard);
 	} else {
@@ -72,12 +72,12 @@ var initialDraw = function(){
 };
 
 //drawFirstFive draws until the first 5 cards in hand are not Doors or Nightmares
-var drawFirstFive = function(){
+var drawFirstFive = function() {
 	initialDraw();
-	if(hand.length != 5){
+	if (hand.length !== 5) {
 		drawFirstFive();
 	}
-}
+};
 
 //Tests
 
