@@ -59,7 +59,7 @@ var playArea = [];
 var doorsGained = [];
 
 
-//***initialDraw does not move limbo cards back to deck yet*** Instead, I should create a shuffle function
+//***initialDraw does not move limbo cards back to deck yet*** Instead, I should create a shuffle function - deck.push.apply(deck,limbo)
 var initialDraw = function() {
 	var newCard = draw();
 	if (newCard.cardType === "Nightmare" || newCard.cardType === "Door") {
@@ -79,9 +79,29 @@ var drawFirstFive = function() {
 	}
 };
 
+//Fisher-Yates shuffle function
+var shuffle = function(array) {
+    var tmp, current, top = array.length;
+
+    if(top) while(--top) {
+        current = Math.floor(Math.random() * (top + 1));
+        tmp = array[current];
+        array[current] = array[top];
+        array[top] = tmp;
+    }
+
+    return array;
+}
+
 //Tests
 
 drawFirstFive();
 console.log(hand);
 console.log(limbo);
 console.log(deck.length);
+
+console.log(deck[0]);
+shuffle(deck);
+console.log(deck);
+console.log(deck.length);
+
