@@ -1,6 +1,5 @@
 /*
 Notes:
-Need to deal with limbo from initialDraw
 Continue game after drawing first hand
 */
 
@@ -31,47 +30,65 @@ var liKey = new Card("Library", "Key", 3);
 var liDoor = new Card("Library", "Door", 2);
 var drMare = new Card("Dream", "Nightmare", 10);
 
-//Making an array of unique cards
+//Making an array of the unique card types
 var cards = [obSun, obMoon, obKey, obDoor,
 			aqSun, aqMoon, aqKey, aqDoor,
 			gaSun, gaMoon, gaKey, gaDoor,
 			liSun, liMoon, liKey, liDoor,
 			drMare];
 
-//Initializing the deck array from the cards array
+
+//Declare all stacks
 var deck = [];
-for (var i = 0; i < cards.length; i++) {
-	for (var j = 0; j < cards[i].amount; j++) {
-		deck.push(cards[i]);
-	}
-}
-
-//Draw a card from the deck
-var draw = function() {
-	var card = deck[Math.floor(Math.random() * deck.length)];
-	return card;
-};
-
-//Declaring other stacks
 var hand = [];
 var limbo = [];
 var playArea = [];
 var doorsGained = [];
 
+//Fisher-Yates shuffle function
+var shuffle = function(array) {
+    var tmp, current, top = array.length;
+    if(top) {
+    	while(--top) {
+	        current = Math.floor(Math.random() * (top + 1));
+	        tmp = array[current];
+	        array[current] = array[top];
+	        array[top] = tmp;
+    	}
+    }
+    return array;
+};
 
-//***initialDraw does not move limbo cards back to deck yet*** Instead, I should create a shuffle function - deck.push.apply(deck,limbo)
+//Initializing the deck array from the cards array and shuffling deck
+var createDeck = function() {
+	for (var i = 0; i < cards.length; i++) {
+		for (var j = 0; j < cards[i].amount; j++) {
+			deck.push(cards[i]);
+		}
+	}
+	shuffle(deck);
+};
+
+//Draw the first card from the deck
+var draw = function() {
+	var card = deck[0];
+	return card;
+};
+
+
+//initialDraw draws a card - Goes in limbo if Nightmare or Door, otherwise goes in hand.
 var initialDraw = function() {
 	var newCard = draw();
 	if (newCard.cardType === "Nightmare" || newCard.cardType === "Door") {
-		deck.pop(newCard);
+		deck.splice(0,1);
 		limbo.push(newCard);
 	} else {
-		deck.pop(newCard);
+		deck.splice(0,1);
 		hand.push(newCard);
 	}
 };
 
-//drawFirstFive draws until the first 5 cards in hand are not Doors or Nightmares
+//drawFirstFive calls initialDraw until the first 5 cards in hand are not Doors or Nightmares
 var drawFirstFive = function() {
 	initialDraw();
 	if (hand.length !== 5) {
@@ -79,29 +96,27 @@ var drawFirstFive = function() {
 	}
 };
 
-//Fisher-Yates shuffle function
-var shuffle = function(array) {
-    var tmp, current, top = array.length;
+//Puts limbo cards back in deck and then shuffles deck
+var shuffleLimboToDeck = function() {
+	deck.push.apply(deck, limbo);
+	limbo = [];
+	shuffle(deck);
+};
 
-    if(top) while(--top) {
-        current = Math.floor(Math.random() * (top + 1));
-        tmp = array[current];
-        array[current] = array[top];
-        array[top] = tmp;
-    }
 
-    return array;
-}
 
 //Tests
-
+createDeck();
 drawFirstFive();
 console.log(hand);
 console.log(limbo);
 console.log(deck.length);
 
-console.log(deck[0]);
-shuffle(deck);
+shuffleLimboToDeck();
+console.log(hand);
+console.log(limbo);
 console.log(deck);
 console.log(deck.length);
+
+
 
