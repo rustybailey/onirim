@@ -29,7 +29,6 @@ h1 { color: red; font-size: 96px; }
 	margin-right: -180px;
 }
 
-
 .card { 
 	background-color: #fff;
 	-moz-border-radius: 15px; 
@@ -49,18 +48,11 @@ h1 { color: red; font-size: 96px; }
 .card.flipped { -webkit-transform: rotateY(180deg); } 
 */
 
-.card .corner { 
-	line-height: 1; 
-	overflow: hidden; 
-	position: absolute; 
-	text-align: center; 
-}
-
-.card .corner.left_top { left: 8px; top: 12px; }
-.card .corner.right_top { right: 8px; top: 12px;}
-
-.card .suit { font-weight: bold; position: absolute; text-align: center; }
-.card .middle_center { left: 45px; top: 130px; }
+.left_top { left: 8px; top: 12px; position: absolute;}
+.right_top { right: 8px; top: 12px; position: absolute;}
+.middle_center { left: 45px; top: 130px; position: absolute;}
 
 .observatory { background-color: red; }
 .aquarium {	background-color: aqua; }
+.garden { background-color: green; }
+.library {background-color: brown; }
