@@ -23,23 +23,25 @@ h1 { color: red; font-size: 96px; }
 	border: solid 1px lightgray;
 	position: absolute;
 	padding: 10px;
+	top: 200px;
+	left: 275px;
 }
 
 #labyrinth .card{
-	margin-right: -180px;
+	margin-right: -90px;
 }
 
 .card { 
 	background-color: #fff;
-	-moz-border-radius: 15px; 
-	-webkit-border-radius: 15px; 
+	-moz-border-radius: 7.5px; 
+	-webkit-border-radius: 7.5px; 
 	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 	float: left; 
-	height: 350px; 
-	margin: 0 15px 15px 0; 
+	height: 175px; 
+	margin: 0 15px 0 0; 
 	position: relative; 
-	width: 225px; 
+	width: 112.5px; 
 	z-index: 2; 
 }
 
@@ -48,11 +50,11 @@ h1 { color: red; font-size: 96px; }
 .card.flipped { -webkit-transform: rotateY(180deg); } 
 */
 
-.left_top { left: 8px; top: 12px; position: absolute;}
-.right_top { right: 8px; top: 12px; position: absolute;}
-.middle_center { left: 45px; top: 130px; position: absolute;}
+.left_top { left: 6px; top: 7px; position: absolute;}
+.right_top { right: 6px; top: 7px; position: absolute;}
+.middle_center { left: 22.5px; top: 65px; position: absolute;}
 
-.observatory { background-color: red; }
+.observatory { background-color: pink; }
 .aquarium {	background-color: aqua; }
 .garden { background-color: green; }
 .library {background-color: brown; }
