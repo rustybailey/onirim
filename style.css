@@ -1,0 +1,66 @@
+/*-----------------------------------------------------------------------------------
+  Global Reset v0.3 (based on http://meyerweb.com/eric/tools/css/reset/ - v1.0 | 20080212)
+-----------------------------------------------------------------------------------*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+:focus { outline: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* HTML5 */
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+
+/* Element */
+
+html, body { height: 100%; width: 100%; }
+body { background-color: #e7e7e7; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; padding: 20px; }
+h1 { color: red; font-size: 96px; }
+
+/* Card */
+#labyrinth {
+	border: solid 1px lightgray;
+	position: absolute;
+	padding: 10px;
+}
+
+#labyrinth .card{
+	margin-right: -180px;
+}
+
+
+.card { 
+	background-color: #fff;
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+	float: left; 
+	height: 350px; 
+	margin: 0 15px 15px 0; 
+	position: relative; 
+	width: 225px; 
+	z-index: 2; 
+}
+
+/* Might need later when flipping...
+.card .back { background-color: red; -webkit-transform: rotateY(180deg); }
+.card.flipped { -webkit-transform: rotateY(180deg); } 
+*/
+
+.card .corner { 
+	line-height: 1; 
+	overflow: hidden; 
+	position: absolute; 
+	text-align: center; 
+}
+
+.card .corner.left_top { left: 8px; top: 12px; }
+.card .corner.right_top { right: 8px; top: 12px;}
+
+.card .suit { font-weight: bold; position: absolute; text-align: center; }
+.card .middle_center { left: 45px; top: 130px; }
+
+.observatory { background-color: red; }
+.aquarium {	background-color: aqua; }
