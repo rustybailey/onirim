@@ -28,7 +28,7 @@ h1 { color: red; font-size: 96px; }
 }
 
 #labyrinth .card{
-	margin-right: -90px;
+	margin-right: -85px;
 }
 
 .card { 
@@ -49,12 +49,12 @@ h1 { color: red; font-size: 96px; }
 .card .back { background-color: red; -webkit-transform: rotateY(180deg); }
 .card.flipped { -webkit-transform: rotateY(180deg); } 
 */
-
-.left_top { left: 6px; top: 7px; position: absolute;}
-.right_top { right: 6px; top: 7px; position: absolute;}
-.middle_center { left: 22.5px; top: 65px; position: absolute;}
-
 .observatory { background-color: pink; }
 .aquarium {	background-color: aqua; }
 .garden { background-color: green; }
 .library {background-color: brown; }
+
+.left_top { left: 6px; top: 7px; position: absolute;}
+.right_top { right: 6px; top: 7px; position: absolute;}
+.middle_center { left: 15%; top: 27%; position: absolute;}
+
