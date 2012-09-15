@@ -54,6 +54,55 @@ h1 { color: red; font-size: 96px; }
 .garden { background-color: green; }
 .library {background-color: brown; }
 
+.back_tl {
+	background-color: #441600;
+	height: 87.5px;
+	width: 56.25px;
+	-moz-border-top-left-radius: 7.5px;
+	-webkit-border-top-left-radius: 7.5px;
+	float:left;
+}
+.back_tr {
+	background-color: rgb(205,55,0);
+	height: 87.5px;
+	width: 56.25px;
+	-moz-border-top-right-radius: 7.5px;
+	-webkit-border-top-right-radius: 7.5px;
+	float:left;
+}
+.back_bl {
+	background-color: darkblue;
+	height: 87.5px;
+	width: 56.25px;
+	-moz-border-bottom-left-radius: 7.5px;
+	-webkit-border-bottom-left-radius: 7.5px;
+	float:left;
+}
+.back_br {
+	background-color: darkgreen;
+	height: 87.5px;
+	width: 56.25px;
+	-moz-border-bottom-right-radius: 7.5px;
+	-webkit-border-bottom-right-radius: 7.5px;
+	float:left;
+}
+.back_middle {
+	background-color: white;
+	-moz-border-radius: 90px; 
+	-webkit-border-radius: 90px;
+	border: solid black 0px;
+	position: absolute;
+	top: 36%;
+	left: 28%;
+	padding: 5px;
+
+}
+.back_middle_img {
+	position: relative;
+	bottom: 8px;
+
+}
+
 .left_top { left: 6px; top: 7px; position: absolute;}
 .right_top { right: 6px; top: 7px; position: absolute;}
 .middle_center { left: 15%; top: 27%; position: absolute;}
