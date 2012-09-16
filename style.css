@@ -116,10 +116,16 @@ h1 { color: red; font-size: 96px; }
 .back_middle_img {
 	position: relative;
 	bottom: 8px;
-
 }
+
+.back_middle_img img { height: 40px; } 
 
 .left_top { left: 6px; top: 7px; position: absolute;}
 .right_top { right: 6px; top: 7px; position: absolute;}
 .middle_center { left: 15%; top: 27%; position: absolute;}
+.middle_top { left: 33%; top: 12%; position: absolute;}
 
+.left_top img { height: 20px; }
+.right_top img { height: 20px; }
+.middle_center img { height: 80px; }
+.middle_top img { height: 30px; }
