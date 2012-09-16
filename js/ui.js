@@ -1,15 +1,15 @@
-var addCard = function(cardName, cardType) {
+var addCard = function(cardNameStr, cardTypeStr) {
 	var htmlString = 
-	'<div class="card ' + cardName + '">' +
+	'<div class="card ' + cardNameStr + '">' +
 		'<div class="front">' +
 			'<div class="left_top">' +
-				'<img style="height: 20px;" src="icons/'+ cardType +'.svg"/>' +
+				'<img style="height: 20px;" src="icons/'+ cardTypeStr +'.svg"/>' +
 			'</div>' +
 			'<div class="middle_center">' +
-				'<img style="height: 80px;" src="icons/'+ cardName +'.svg"/>' +
+				'<img style="height: 80px;" src="icons/'+ cardNameStr +'.svg"/>' +
 			'</div>' +
 			'<div class="right_top">' +
-				'<img style="height: 20px;" src="icons/'+ cardType +'.svg"/>' +
+				'<img style="height: 20px;" src="icons/'+ cardTypeStr +'.svg"/>' +
 			'</div>' +
 		'</div>' +
 	'</div>'
@@ -17,5 +17,6 @@ var addCard = function(cardName, cardType) {
 }
 
 $(document).ready(function() {
-  addCard('observatory', 'moon');
+	createDeck();
+	drawFirstFive();
 });

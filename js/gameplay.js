@@ -5,10 +5,12 @@ Continue game after drawing first hand
 
 
 //Card constructor
-function Card(cardName, cardType, amount) {
+function Card(cardName, cardType, amount, cardNameStr, cardTypeStr) {
 	this.cardName = cardName;
 	this.cardType = cardType;
 	this.amount = amount;
+	this.cardNameStr = this.cardName.toString().toLowerCase();
+	this.cardTypeStr = this.cardType.toString().toLowerCase();
 }
 
 //17 different types of cards -- Maybe try to put in an array or object so that initializing the deck will be easy?
@@ -85,6 +87,7 @@ var initialDraw = function() {
 	} else {
 		deck.splice(0,1);
 		hand.push(newCard);
+		addCard(newCard.cardNameStr, newCard.cardTypeStr);
 	}
 };
 
@@ -103,20 +106,6 @@ var shuffleLimboToDeck = function() {
 	shuffle(deck);
 };
 
-
-
-//Tests
-createDeck();
-drawFirstFive();
-console.log(hand);
-console.log(limbo);
-console.log(deck.length);
-
-shuffleLimboToDeck();
-console.log(hand);
-console.log(limbo);
-console.log(deck);
-console.log(deck.length);
 
 
 
