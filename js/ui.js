@@ -40,7 +40,7 @@ var addCard = function(cardNameStr, cardTypeStr, stack) {
 			'</div>' +
 		'</div>'
 	}
-	$(stack).append(htmlString);
+	$(htmlString).hide().appendTo(stack).fadeIn();
 }
 
 $(document).ready(function() {
