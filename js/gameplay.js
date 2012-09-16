@@ -93,10 +93,12 @@ var initialDraw = function() {
 
 //drawFirstFive calls initialDraw until the first 5 cards in hand are not Doors or Nightmares
 var drawFirstFive = function() {
-	initialDraw();
-	if (hand.length !== 5) {
-		drawFirstFive();
-	}
+	setTimeout(function() {
+		initialDraw();
+		if (hand.length !== 5) {
+			drawFirstFive();
+		}
+	}, 300)
 };
 
 //Puts limbo cards back in deck and then shuffles deck
