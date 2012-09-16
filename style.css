@@ -64,6 +64,10 @@ h1 { color: red; font-size: 96px; }
 	opacity: 0.5
 }
 
+#limbo .card {
+	position: absolute;
+}
+
 .card { 
 	background-color: #fff;
 	-moz-border-radius: 7.5px; 

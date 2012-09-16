@@ -1,19 +1,46 @@
-var addCard = function(cardNameStr, cardTypeStr) {
-	var htmlString = 
-	'<div class="card ' + cardNameStr + '">' +
-		'<div class="front">' +
-			'<div class="left_top">' +
-				'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+var addCard = function(cardNameStr, cardTypeStr, stack) {
+	var htmlString = '';
+	if (cardTypeStr === "moon" || cardTypeStr === "sun" || cardTypeStr === "key") {
+		htmlString = '<div class="card ' + cardNameStr + '">' +
+			'<div class="front">' +
+				'<div class="left_top">' +
+					'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+				'</div>' +
+				'<div class="middle_center">' +
+					'<img src="icons/'+ cardNameStr +'.svg"/>' +
+				'</div>' +
+				'<div class="right_top">' +
+					'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+				'</div>' +
 			'</div>' +
-			'<div class="middle_center">' +
-				'<img src="icons/'+ cardNameStr +'.svg"/>' +
+		'</div>'
+	} else if (cardTypeStr === 'door') {
+		htmlString = '<div class="card ' + cardNameStr + '">' +
+			'<div class="front">' +
+				'<div class="middle_top">' +
+					'<img src="icons/' + cardNameStr + '.svg"/>' +
+				'</div>' +
+				'<div class="middle_center">' +
+					'<img src="icons/' + cardTypeStr + '.svg"/>' +
+				'</div>' +
 			'</div>' +
-			'<div class="right_top">' +
-				'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+		'</div>'
+	} else if (cardTypeStr === 'nightmare') {
+		htmlString = '<div class="card '+ cardTypeStr +'">' +
+			'<div class="front">' +
+				'<div class="nightmare_one">' +
+					'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+				'</div>' +
+				'<div class="nightmare_two">' +
+					'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+				'</div>' +
+				'<div class="nightmare_three">' +
+					'<img src="icons/'+ cardTypeStr +'.svg"/>' +
+				'</div>' +
 			'</div>' +
-		'</div>' +
-	'</div>'
-	$('#hand').append(htmlString);
+		'</div>'
+	}
+	$(stack).append(htmlString);
 }
 
 $(document).ready(function() {

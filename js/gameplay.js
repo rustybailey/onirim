@@ -5,7 +5,7 @@ Continue game after drawing first hand
 
 
 //Card constructor
-function Card(cardName, cardType, amount, cardNameStr, cardTypeStr) {
+function Card(cardName, cardType, amount) {
 	this.cardName = cardName;
 	this.cardType = cardType;
 	this.amount = amount;
@@ -83,11 +83,12 @@ var initialDraw = function() {
 	var newCard = draw();
 	if (newCard.cardType === "Nightmare" || newCard.cardType === "Door") {
 		deck.splice(0,1);
+		addCard(newCard.cardNameStr, newCard.cardTypeStr, '#limbo');
 		limbo.push(newCard);
 	} else {
 		deck.splice(0,1);
+		addCard(newCard.cardNameStr, newCard.cardTypeStr, '#hand');
 		hand.push(newCard);
-		addCard(newCard.cardNameStr, newCard.cardTypeStr);
 	}
 };
 
