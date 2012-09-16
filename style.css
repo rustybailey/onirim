@@ -81,10 +81,10 @@ h1 { color: red; font-size: 96px; }
 	z-index: 2; 
 }
 
-.observatory { background-color: pink; }
+.observatory { background-color: darkorange; }
 .aquarium {	background-color: aqua; }
-.garden { background-color: green; }
-.library { background-color: brown; }
+.garden { background-color: lightgreen; }
+.library { background-color: #6F4733; }
 .nightmare { background-color: gray; }
 
 .back_tl {
