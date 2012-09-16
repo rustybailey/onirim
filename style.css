@@ -18,7 +18,7 @@ html, body { height: 100%; width: 100%; }
 body { background-color: #e7e7e7; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; padding: 20px; }
 h1 { color: red; font-size: 96px; }
 
-/* Card */
+/* Cards */
 #doors {
 	border: solid 1px lightgray;
 	position: absolute;
@@ -68,7 +68,8 @@ h1 { color: red; font-size: 96px; }
 .observatory { background-color: pink; }
 .aquarium {	background-color: aqua; }
 .garden { background-color: green; }
-.library {background-color: brown; }
+.library { background-color: brown; }
+.nightmare { background-color: gray; }
 
 .back_tl {
 	background-color: #441600;
@@ -129,3 +130,11 @@ h1 { color: red; font-size: 96px; }
 .right_top img { height: 20px; }
 .middle_center img { height: 80px; }
 .middle_top img { height: 30px; }
+
+.nightmare_one { left: 6px; top: 50px; position: absolute; }
+.nightmare_two { left: 40px; top: 40px; position: absolute; }
+.nightmare_three { left: 20px; top: 20px; position: absolute; }
+
+.nightmare_one img { height: 90px; }
+.nightmare_two img { height: 60px; opacity: 0.8; }
+.nightmare_three img { height: 43px; opacity: 0.6; }
