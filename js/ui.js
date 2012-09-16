@@ -13,7 +13,7 @@ var addCard = function(cardNameStr, cardTypeStr) {
 			'</div>' +
 		'</div>' +
 	'</div>'
-	$('#labyrinth').append(htmlString);
+	$('#hand').append(htmlString);
 }
 
 $(document).ready(function() {

@@ -19,16 +19,32 @@ body { background-color: #e7e7e7; font-family: 'Helvetica Neue', Helvetica, Aria
 h1 { color: red; font-size: 96px; }
 
 /* Card */
+#doors {
+	border: solid 1px lightgray;
+	position: absolute;
+	padding: 10px;
+	top: 10px;
+	left: 150px;
+}
+
 #labyrinth {
 	border: solid 1px lightgray;
 	position: absolute;
 	padding: 10px;
-	top: 200px;
-	left: 275px;
+	top: 205px;
+	left: 150px;
 }
 
 #labyrinth .card{
 	margin-right: -85px;
+}
+
+#hand {
+	border: solid 1px lightgray;
+	position: absolute;
+	padding: 10px;
+	top: 400px;
+	left: 150px;
 }
 
 .card { 
@@ -45,7 +61,7 @@ h1 { color: red; font-size: 96px; }
 	z-index: 2; 
 }
 
-/* Might need later when flipping...
+/* Might need later when flipping cards...
 .card .back { background-color: red; -webkit-transform: rotateY(180deg); }
 .card.flipped { -webkit-transform: rotateY(180deg); } 
 */
