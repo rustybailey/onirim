@@ -27,6 +27,10 @@ h1 { color: red; font-size: 96px; }
 	left: 150px;
 }
 
+#doors .card {
+	margin-right: 15px;
+}
+
 #labyrinth {
 	border: solid 1px lightgray;
 	position: absolute;
@@ -47,6 +51,19 @@ h1 { color: red; font-size: 96px; }
 	left: 150px;
 }
 
+#hand .card {
+	margin-right: 15px;
+}
+
+#limbo {
+	border: solid 1px lightgray;
+	position: absolute;
+	padding: 10px;
+	top: 205px;
+	left: 10px;
+	opacity: 0.5
+}
+
 .card { 
 	background-color: #fff;
 	-moz-border-radius: 7.5px; 
@@ -54,17 +71,12 @@ h1 { color: red; font-size: 96px; }
 	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 	float: left; 
-	height: 175px; 
-	margin: 0 15px 0 0; 
+	height: 175px;
 	position: relative; 
 	width: 112.5px; 
 	z-index: 2; 
 }
 
-/* Might need later when flipping cards...
-.card .back { background-color: red; -webkit-transform: rotateY(180deg); }
-.card.flipped { -webkit-transform: rotateY(180deg); } 
-*/
 .observatory { background-color: pink; }
 .aquarium {	background-color: aqua; }
 .garden { background-color: green; }
@@ -123,7 +135,7 @@ h1 { color: red; font-size: 96px; }
 
 .left_top { left: 6px; top: 7px; position: absolute;}
 .right_top { right: 6px; top: 7px; position: absolute;}
-.middle_center { left: 15%; top: 27%; position: absolute;}
+.middle_center { left: 15%; top: 29%; position: absolute;}
 .middle_top { left: 33%; top: 12%; position: absolute;}
 
 .left_top img { height: 20px; }
