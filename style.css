@@ -140,7 +140,7 @@ h1 { color: red; font-size: 96px; }
 .left_top { left: 6px; top: 7px; position: absolute;}
 .right_top { right: 6px; top: 7px; position: absolute;}
 .middle_center { left: 15%; top: 29%; position: absolute;}
-.middle_top { left: 33%; top: 12%; position: absolute;}
+.middle_top { left: 34%; top: 12%; position: absolute;}
 
 .left_top img { height: 20px; }
 .right_top img { height: 20px; }

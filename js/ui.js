@@ -18,7 +18,7 @@ var addCard = function(cardNameStr, cardTypeStr, stack) {
 		htmlString = '<div class="card ' + cardNameStr + '">' +
 			'<div class="front">' +
 				'<div class="middle_top">' +
-					'<img src="icons/' + cardNameStr + '.svg"/>' +
+					'<img src="icons/' + cardNameStr + '_door.svg"/>' +
 				'</div>' +
 				'<div class="middle_center">' +
 					'<img src="icons/' + cardTypeStr + '.svg"/>' +
