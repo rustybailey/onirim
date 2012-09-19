@@ -14,9 +14,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 /* Element */
 
-html, body { height: 100%; width: 100%; }
-body { background-color: #e7e7e7; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; padding: 20px; }
-h1 { color: red; font-size: 96px; }
+body { background-color: #e7e7e7; font-size: 10px; padding: 20px; }
 
 /* Cards */
 #doors {
@@ -70,9 +68,9 @@ h1 { color: red; font-size: 96px; }
 
 .card { 
 	background-color: #fff;
-	-moz-border-radius: 7.5px; 
+	border-radius: 7.5px; 
 	-webkit-border-radius: 7.5px; 
-	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 	float: left; 
 	height: 175px;
@@ -91,7 +89,7 @@ h1 { color: red; font-size: 96px; }
 	background-color: #441600;
 	height: 87.5px;
 	width: 56.25px;
-	-moz-border-top-left-radius: 7.5px;
+	border-top-left-radius: 7.5px;
 	-webkit-border-top-left-radius: 7.5px;
 	float:left;
 }
@@ -99,7 +97,7 @@ h1 { color: red; font-size: 96px; }
 	background-color: rgb(205,55,0);
 	height: 87.5px;
 	width: 56.25px;
-	-moz-border-top-right-radius: 7.5px;
+	border-top-right-radius: 7.5px;
 	-webkit-border-top-right-radius: 7.5px;
 	float:left;
 }
@@ -107,7 +105,7 @@ h1 { color: red; font-size: 96px; }
 	background-color: darkblue;
 	height: 87.5px;
 	width: 56.25px;
-	-moz-border-bottom-left-radius: 7.5px;
+	border-bottom-left-radius: 7.5px;
 	-webkit-border-bottom-left-radius: 7.5px;
 	float:left;
 }
@@ -115,13 +113,13 @@ h1 { color: red; font-size: 96px; }
 	background-color: darkgreen;
 	height: 87.5px;
 	width: 56.25px;
-	-moz-border-bottom-right-radius: 7.5px;
+	border-bottom-right-radius: 7.5px;
 	-webkit-border-bottom-right-radius: 7.5px;
 	float:left;
 }
 .back_middle {
 	background-color: white;
-	-moz-border-radius: 90px; 
+	border-radius: 90px; 
 	-webkit-border-radius: 90px;
 	border: solid black 0px;
 	position: absolute;
