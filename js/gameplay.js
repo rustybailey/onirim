@@ -1,5 +1,6 @@
 /*
 Notes:
+Visually shuffle limbo into deck
 Continue game after drawing first hand
 */
 
@@ -13,7 +14,7 @@ function Card(cardName, cardType, amount) {
 	this.cardTypeStr = this.cardType.toString().toLowerCase();
 }
 
-//17 different types of cards -- Maybe try to put in an array or object so that initializing the deck will be easy?
+//17 different types of cards
 var obSun = new Card("Observatory", "Sun", 9);
 var obMoon = new Card("Observatory", "Moon", 4);
 var obKey = new Card("Observatory", "Key", 3);
@@ -73,8 +74,7 @@ var createDeck = function() {
 
 //Draw the first card from the deck
 var draw = function() {
-	var card = deck[0];
-	return card;
+	return deck.pop();
 };
 
 
@@ -82,11 +82,9 @@ var draw = function() {
 var initialDraw = function() {
 	var newCard = draw();
 	if (newCard.cardType === "Nightmare" || newCard.cardType === "Door") {
-		deck.splice(0,1);
 		addCard(newCard.cardNameStr, newCard.cardTypeStr, '#limbo');
 		limbo.push(newCard);
 	} else {
-		deck.splice(0,1);
 		addCard(newCard.cardNameStr, newCard.cardTypeStr, '#hand');
 		hand.push(newCard);
 	}
@@ -99,7 +97,7 @@ var drawFirstFive = function() {
 		if (hand.length !== 5) {
 			drawFirstFive();
 		}
-	}, 300)
+	}, 300);
 };
 
 //Puts limbo cards back in deck and then shuffles deck
