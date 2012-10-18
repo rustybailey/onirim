@@ -2,27 +2,27 @@
 <html>
 <head>
 	<title>Onirim</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-  <div class="card">
-    <div class="back">
-      <div class="back_tl"></div>
-      <div class="back_tr"></div>
-      <div class="back_bl"></div>
-      <div class="back_br"></div>
-      <div class="back_middle">
-        <div class="back_middle_img">
-          <img src="icons/nightmare.svg"/>
+  <div id="deck">
+    <div class="card">
+      <div class="back">
+        <div class="back_tl"></div>
+        <div class="back_tr"></div>
+        <div class="back_bl"></div>
+        <div class="back_br"></div>
+        <div class="back_middle">
+          <div class="back_middle_img">
+            <img src="icons/nightmare.svg"/>
+          </div>
         </div>
-      </div>
-    </div>    
+      </div>    
+    </div>
   </div>
 
-  <div id="limbo">
-    <div class="card" style="text-align: center">This where limbo cards go.</div>
-  </div>
   <div id="doors">
     <div class="card" style="text-align: center">This where your doors go.</div>
 
@@ -52,10 +52,17 @@
     </div>
 
   </div>
+
+  <div id="limbo">
+    <div class="card" style="text-align: center">This where limbo cards go.</div>
+  </div>
+
+
   <div id="labyrinth">
     <div class="card" style="text-align: center">This is the play area.</div> 
   </div>
-<div id="hand"></div>
+  
+  <div id="hand"></div>
 
 
 	<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
